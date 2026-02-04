@@ -24,7 +24,7 @@ comida_minuscula = comida.lower()
 # Usa una estructura if / elif / else para verificar la comida elegida.
 # Imprime un mensaje con el país de origen para cada comida.
 
-if comida_minuscula == "tacos":
+if comida_minuscula == "taquitos":
    print("Los tacos son tipicos de Mexico")
 elif comida_minuscula == "arepas":
     print("Las arepas son tipicas de Venezuela y Colombia")

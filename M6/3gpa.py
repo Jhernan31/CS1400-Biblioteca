@@ -10,13 +10,16 @@ def porcentaje_a_gpa(porcentaje):
     if porcentaje >= 93:
         return 4.0
     # TODO 1: Completa la función para convertir el porcentaje a GPA usando la escala estándar.
-
+    elif porcentaje >= 83 and porcentaje <= 86:
+        return 3.0
+    elif porcentaje >= 73 and porcentaje <= 76:
+        return 2.0
     else:
         return 0.0
 
 # TODO #2: Pedir cuántas materias tiene el usuario, y asignarlo a un variable (recuerda convertirlo a un entero).
 
-
+num_materias = int(input("Ingrese cuantas materias cursa el estudiante: "))
 
 # Inicializar variables para acumular puntos y créditos
 total_puntos = 0.0
@@ -36,6 +39,8 @@ for i in range(num_materias):
 # entonces calcula el GPA final y muestra el resultado
 # de lo contrario muestra un mensaje indicando que no se ingresaron materias válidas.
 # Si no, imprimir un mensaje indicando que no se ingresaron materias válidas o algo similar.
+
+
 
 # TODO #4: En que otra situacion podrias usar una funcion como esta?
 # 

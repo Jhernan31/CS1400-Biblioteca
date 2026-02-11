@@ -7,6 +7,7 @@ Incluir espacios manualmente (" "), y combinar entrada del usuario con otros tex
 
 # TODO Tarea 1: Escribe una linea de bienvenida a este programa 
 
+print("Bienvenido a la entrevista del laboratorio 6")
 
 # TODO Tarea 2: Solicitar datos del usuario. 
 # Usar tres variables: nombre, apellido, y cancion.

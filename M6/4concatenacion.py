@@ -16,6 +16,10 @@ print("Bienvenido a la entrevista del laboratorio 6")
 # Una manera de validar entradas vacías
 # Toma en cuenta que cambios podrias realizar si tienen un segundo nombre, y/o un segundo apellido.
 # La meta es obtener su nombre completo.
+nombre = input("Ingresa tu nombre: ")
+apellido = input("Ahora ingresa tu apellido: ")
+cancion = input("Ingresa el nombre de tu cancion favorita: ")
+
 if not nombre.strip():
     print("Por favor, escribe tu primer nombre.")
     exit()
@@ -37,15 +41,19 @@ cancion = cancion.strip().title()
 # TODO Tarea 3: Crear un variable llamado nombre_completo para juntar
 #  (concatenar) todos los nombres ingresados, usando los espacios adecuado.
 
+nombre_completo = nombre + " " + apellido
 
 
 # TODO Tarea 4: Mostrar el resultado con alguna frase como por ejemplo, "Tu nombre completo es  ___ "
 
-
+print(f"Tu nombre completo es: {nombre_completo}")
 
 # TODO Tarea 5: Crear un ultimo variable, y agruegale más texto concatenado.
 # Puede ser un saludo, o un piropo que incluya el variable para la cancion.
 # Por ejemplo, "Hola ___, me encanta que tu cancion favorita sea ___! "
 
+saludo = "Hola " + nombre_completo + ", Wow! tu cancion favorita " + cancion + " tambien me encanta!!!"
+
 # Imprimir a la terminal
 
+print (saludo)

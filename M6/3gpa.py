@@ -7,16 +7,58 @@ en una escala de 4.0, y luego calculará el GPA final del semestre basado en los
 
 # Función, con un parametro, para convertir porcentaje a GPA en una escala de 4.0
 def porcentaje_a_gpa(porcentaje):
-    if porcentaje >= 93:
+    if porcentaje >= 97:
         return 4.0
     # TODO 1: Completa la función para convertir el porcentaje a GPA usando la escala estándar.
-    elif porcentaje >= 83 and porcentaje <= 86:
+    elif porcentaje >= 93 and porcentaje < 97:
+        return 4.0
+    elif porcentaje >= 90 and porcentaje < 93:
+        return 3.7
+    elif porcentaje >= 87 and porcentaje < 90:
+        return 3.3
+    elif porcentaje >= 83 and porcentaje < 87:
         return 3.0
-    elif porcentaje >= 73 and porcentaje <= 76:
+    elif porcentaje >= 80 and porcentaje < 83:
+        return 2.7
+    elif porcentaje >= 77 and porcentaje < 80:
+        return 2.3
+    elif porcentaje >= 73 and porcentaje < 77:
         return 2.0
+    elif porcentaje >= 70 and porcentaje < 73:
+        return 1.7
+    elif porcentaje >= 67 and porcentaje < 70:
+        return 1.3
+    elif porcentaje >= 65 and porcentaje < 67:
+        return 1.0
     else:
         return 0.0
 
+def letter_grade(porcentage_gpa):
+    if porcentaje >= 97:
+        return "A+"
+    elif porcentaje >= 93 and porcentaje < 97:
+        return "A"
+    elif porcentaje >= 90 and porcentaje < 93:
+        return "A-"
+    elif porcentaje >= 87 and porcentaje < 90:
+        return "B+"
+    elif porcentaje >= 83 and porcentaje < 87:
+        return "B"
+    elif porcentaje >= 80 and porcentaje < 83:
+        return "B-"
+    elif porcentaje >= 77 and porcentaje < 80:
+        return "C+"
+    elif porcentaje >= 73 and porcentaje < 77:
+        return "C"
+    elif porcentaje >= 70 and porcentaje < 73:
+        return "C-"
+    elif porcentaje >= 67 and porcentaje < 70:
+        return "D+"
+    elif porcentaje >= 65 and porcentaje < 67:
+        return "D"
+    else:
+        return "F"
+    
 # TODO #2: Pedir cuántas materias tiene el usuario, y asignarlo a un variable (recuerda convertirlo a un entero).
 
 num_materias = int(input("Ingrese cuantas materias cursa el estudiante: "))
@@ -40,21 +82,28 @@ for i in range(num_materias):
 # de lo contrario muestra un mensaje indicando que no se ingresaron materias válidas.
 # Si no, imprimir un mensaje indicando que no se ingresaron materias válidas o algo similar.
 
+gpa_semestre = total_puntos / total_creditos
+gpa_grade_letter = letter_grade(gpa_semestre)
+
+if gpa_semestre > 0:
+    print (f"Tu GPA estimado para el semestre es: {gpa_semestre:.2f} {gpa_grade_letter}")
+else:
+    print("No se ingresaron materias validas")
 
 
 # TODO #4: En que otra situacion podrias usar una funcion como esta?
 # 
 # 
 #     
-"""
-#Salida esperada
-¿Cuántas materias tienes este semestre? 3
-Ingrese el porcentaje actual de la materia #1 (ejemplo: 87.5): 91
-Ingrese los créditos de la materia #1: 3
-Ingrese el porcentaje actual de la materia #2 (ejemplo: 87.5): 84
-Ingrese los créditos de la materia #2: 4
-Ingrese el porcentaje actual de la materia #3 (ejemplo: 87.5): 78
-Ingrese los créditos de la materia #3: 2
 
-Tu GPA estimado para el semestre es: 2.98
-"""
+
+# Salida esperada
+#¿Cuántas materias tienes este semestre? 3
+#Ingrese el porcentaje actual de la materia #1 (ejemplo: 87.5): 91
+#Ingrese los créditos de la materia #1: 3
+#Ingrese el porcentaje actual de la materia #2 (ejemplo: 87.5): 84
+#Ingrese los créditos de la materia #2: 4
+#Ingrese el porcentaje actual de la materia #3 (ejemplo: 87.5): 78
+#Ingrese los créditos de la materia #3: 2
+
+# Tu GPA estimado para el semestre es: 2.98

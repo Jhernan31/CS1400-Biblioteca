@@ -10,6 +10,7 @@
 
 # Importaciones necesarias
 import math
+
 from turtle import make_turtle, forward, left, right, penup, pendown
 
 def triangulo(longitud, angulo):
@@ -35,12 +36,12 @@ def triangulo(longitud, angulo):
     # Pista: estás trabajando con dos lados iguales (longitud)
     # y el ángulo central entre ellos.
     # Puedes usar math.sin().
-    base =  # Escribe aquí el cálculo
+    base =  math.sin(angulo_rad) # Escribe aquí el cálculo
     
     # TODO:
     # Calcula el ángulo que debe girar la tortuga en las esquinas
     # para que el triángulo se cierre correctamente.
-    angulo_giro =  # Escribe aquí el cálculo
+    angulo_giro =  left(90)# Escribe aquí el cálculo
 
     # --------------------------------
     # Paso 3: Dibujo del triángulo
@@ -75,7 +76,7 @@ def dibujar_tarta(n_porciones, longitud):
     # TODO:
     # Calcula el ángulo central de cada porción.
     # Pista: un círculo completo tiene 360 grados.
-    angulo_porcion =  # Divide 360 entre el número de porciones
+    angulo_porcion =  n_porciones / 360 # Divide 360 entre el número de porciones
     
     # --------------------------------
     # Paso 5: Dibujar todas las porciones
@@ -90,6 +91,10 @@ def dibujar_tarta(n_porciones, longitud):
     # for ...:
     #     triangulo(...)
     #     left(...)
+
+    for tarta in range(n_porciones):
+        triangulo()
+        left()
     
     pass  # ⚠️ Borra esta línea cuando completes el código
 

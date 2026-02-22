@@ -30,6 +30,8 @@ from turtle import make_turtle, forward, left
 
 # Escribe aquí tu código
 
+t = make_turtle()
+t.forward(100)
 
 # ------------------------------------------
 # Paso 2: Dibujar una línea

@@ -17,8 +17,10 @@
 # ------------------------------------------
 # Importaciones necesarias
 # ------------------------------------------
+#from turtle import make_turtle, forward, left
+import turtle
 
-# from turtle import make_turtle, forward, left
+from turtle import make_turtle, forward, left
 
 import turtle
 # ------------------------------------------
@@ -112,9 +114,3 @@ print("Dibujando un cuadrado con bucle...")
 # - Un triángulo tiene 3 lados.
 # - Un giro completo es 360 grados.
 # - ¿Cuánto debe girar en cada esquina?
-
-for triangulo in range(3):
-    tortuga.forward(100)
-    tortuga.left(120)
-
-ventana.exitonclick()
